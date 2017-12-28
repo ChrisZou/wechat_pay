@@ -1,4 +1,4 @@
-defmodule WechatPay.Utils.XMLBuilder do
+defmodule WechatPay.XML.Builder do
   @moduledoc """
   Module to convert a map to XML string
   """
@@ -9,7 +9,7 @@ defmodule WechatPay.Utils.XMLBuilder do
   ## Example
 
   ```elixir
-  iex> WechatPay.Utils.XMLBuilder.to_xml(%{foo: "bar"})
+  iex> WechatPay.XML.Builder.to_xml(%{foo: "bar"})
   ...> "<xml><foo><![CDATA[bar]]></foo></xml>"
   ```
   """

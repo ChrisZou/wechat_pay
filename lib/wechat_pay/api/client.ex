@@ -17,10 +17,10 @@ defmodule WechatPay.API.Client do
     verify_sign: boolean
   ]
 
-  alias WechatPay.Utils.XMLBuilder
-  alias WechatPay.Utils.XMLParser
-  alias WechatPay.Utils.NonceStr
-  alias WechatPay.Utils.Signature
+  alias WechatPay.XML.Builder, as: XMLBuilder
+  alias WechatPay.XML.Parser, as: XMLParser
+  alias WechatPay.NonceStr
+  alias WechatPay.Signature
   alias WechatPay.Error
 
   @sandbox_url "https://api.mch.weixin.qq.com/sandboxnew/"

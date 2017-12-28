@@ -1,4 +1,4 @@
-defmodule WechatPay.Utils.NonceStr do
+defmodule WechatPay.NonceStr do
   @moduledoc """
   Module to generate nonce string value
   """
@@ -9,7 +9,7 @@ defmodule WechatPay.Utils.NonceStr do
   ## Example
 
   ```elixir
-  iex> WechatPay.Utils.NonceStr.generate()
+  iex> WechatPay.NonceStr.generate()
   ...> "dzhGXJ8zotL1LYkqnjnDSX9Cw0S2vV0"
   ```
   """

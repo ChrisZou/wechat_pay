@@ -1,4 +1,4 @@
-defmodule WechatPay.Utils.XML do
+defmodule WechatPay.XML.Record do
   @moduledoc false
 
   import Record, only: [defrecord: 2, extract: 2]

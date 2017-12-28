@@ -10,7 +10,7 @@ defmodule WechatPay.Plug.Refund do
   @callback init(opts :: Plug.opts) :: Plug.opts
   @callback call(conn :: Plug.Conn.t, opts :: Plug.opts) :: Plug.Conn.t
 
-  alias WechatPay.Utils.XMLParser
+  alias WechatPay.XML.Parser, as: XMLParser
   alias WechatPay.Error
 
   import Plug.Conn

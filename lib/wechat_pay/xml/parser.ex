@@ -1,10 +1,10 @@
-defmodule WechatPay.Utils.XMLParser do
+defmodule WechatPay.XML.Parser do
   @moduledoc """
   Module to convert a XML string to map
   """
-  require WechatPay.Utils.XML
+  require WechatPay.XML.Record
 
-  alias WechatPay.Utils.XML
+  alias WechatPay.XML.Record, as: XMLRecord
   alias WechatPay.Error
 
   @doc """
@@ -13,10 +13,10 @@ defmodule WechatPay.Utils.XMLParser do
   ## Example
 
   ```elixir
-  iex> WechatPay.Utils.XMLParser.parse("<xml><foo><![CDATA[bar]]></foo></xml>", "xml")
+  iex> WechatPay.XML.Parser.parse("<xml><foo><![CDATA[bar]]></foo></xml>", "xml")
   ...> {:ok, %{foo: "bar"}}
 
-  iex> WechatPay.Utils.XMLParser.parse("<root><foo><![CDATA[bar]]></foo></root>", "root")
+  iex> WechatPay.XML.Parser.parse("<root><foo><![CDATA[bar]]></foo></root>", "root")
   ...> {:ok, %{foo: "bar"}}
   ```
   """
@@ -46,13 +46,13 @@ defmodule WechatPay.Utils.XMLParser do
   end
 
   defp extract_element(element) do
-    name = XML.xml_element(element, :name)
+    name = XMLRecord.xml_element(element, :name)
 
-    [content] = XML.xml_element(element, :content)
+    [content] = XMLRecord.xml_element(element, :content)
 
     value =
       content
-      |> XML.xml_text(:value)
+      |> XMLRecord.xml_text(:value)
       |> String.Chars.to_string
 
     {name, value}

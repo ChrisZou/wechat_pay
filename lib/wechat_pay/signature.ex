@@ -1,4 +1,4 @@
-defmodule WechatPay.Utils.Signature do
+defmodule WechatPay.Signature do
   @moduledoc """
   Module to sign data
   """
@@ -11,7 +11,7 @@ defmodule WechatPay.Utils.Signature do
   ## Example
 
   ```elixir
-  iex> WechatPay.Utils.Signature.sign(%{...}, "wx9999")
+  iex> WechatPay.Signature.sign(%{...}, "wx9999")
   ...> "02696FC7E3E19F852A0335F2F007DD3E"
   ```
   """
@@ -37,7 +37,7 @@ defmodule WechatPay.Utils.Signature do
   ## Example
 
   ```elixir
-  iex > WechatPay.Utils.Signature.verify(%{sign: "foobar"}, "wx9999")
+  iex > WechatPay.Signature.verify(%{sign: "foobar"}, "wx9999")
   ... > :ok
   ```
   """

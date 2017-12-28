@@ -78,8 +78,8 @@ defmodule WechatPay.PaymentMethod.App do
   ) :: map
 
   alias WechatPay.API
-  alias WechatPay.Utils.NonceStr
-  alias WechatPay.Utils.Signature
+  alias WechatPay.NonceStr
+  alias WechatPay.Signature
 
   defmacro __using__(opts) do
     quote bind_quoted: [opts: opts] do

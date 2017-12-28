@@ -10,8 +10,8 @@ defmodule WechatPay.Plug.Payment do
   @callback init(opts :: Plug.opts) :: Plug.opts
   @callback call(conn :: Plug.Conn.t, opts :: Plug.opts) :: Plug.Conn.t
 
-  alias WechatPay.Utils.XMLParser
-  alias WechatPay.Utils.Signature
+  alias WechatPay.XML.Parser, as: XMLParser
+  alias WechatPay.Signature
   alias WechatPay.Error
 
   import Plug.Conn
